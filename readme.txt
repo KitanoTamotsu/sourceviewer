@@ -52,7 +52,6 @@ RSSやHTMLのソースをテキストファイルに保存して表示させる
 背景:
 
 　LESSON13のRSSマニアで数多くのRSSやHTMLのソースを解析したのでツールを作ってしまいました
-　https://github.com/KitanoTamotsu/favo
   
 　このワークフローのアイコンは、もちろん、ソースがビュー
 　
