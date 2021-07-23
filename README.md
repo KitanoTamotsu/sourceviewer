@@ -1,18 +1,18 @@
 ## 　　Lesson15.　Arg and Varsオブジェクトの変数を動的にセットする 
 #### 開発メモ
 ### 1.テキストファイルのタイトルに日時を使う
-　全てスクリプトに書いてしまえば簡単なのですが、Alfredワークフローの機能で実装してみました
+　全てスクリプトでも良さそうですが、Alfredワークフローの機能で実装してみました
 <br>　ArgandVarsオブジェクトで変数としてファイル名を定義すればOKです
 <br>
-<br> Name欄:filename
+<br>　Name欄:filename
 <br>　Value欄:source-{date:YYYYMMdd}-{time:hhmmss}.txt
 <br>
-<br>　Value欄には{}で動的な文字列をセットします
+<br>　Value欄は{}で動的な文字列をセットすることができます
 <br>　{query}とすれば直前のオブジェクトの標準出力が使えます（簡単にいうとechoしたもの） 　　 
-<br>　{date}や{time}は:のあとにフォーマットを記述できます 
+<br>　上記のように{date}や{time}は:のあとにフォーマットを記述できます 
 <br>
-<br>　セットした結果は、{var: filename}として利用できます
-<br>　（bashスクリプトでは$filenameとして利用）
+<br>　セットした結果は、ワークフローでは{var:filename}として利用できます
+<br>　（スクリプト内では$filenameとして利用）
 <br>
 ### 2.Safariで閲覧しているURLからソースを取得する
 　URLはアップルスクリプトで取得します
@@ -20,16 +20,16 @@
 ```
 　url=`osascript -e 'tell app "safari" to get the url of the current tab of window 1'|sed  's/feed://g'`
 ```
-
 ### 3.終了タグで改行する
 　出力用の整形として終了タグで改行するようにしました
 <br>　具体的には、終了タグ">"と開始タグ"<"の間に改行"\n"を挿入しています
-<br>　また、先頭に取得したURLを表示させています
+<br>　また、テキストファイルの先頭に取得したURLを表示させています
 ```
-　echo -e "curl -sL "$url"\n\n"$res|sed 's/> </>\'\n' </g'
+　echo -e "curl -sL "$url"\n\n"$res | sed 's/> </>\'\n' </g'
 ```
 #### 背景
-　LESSON13のRSSマニアで数多くのRSSやHTMLのソースを解析したのでツールを作ってしまいました
+　LESSON13のRSSマニアで数多くのRSSやHTMLのソースを解析したのでソースを表示する
+<br>　ツールを作ってしまいました
 <br>　このワークフローのアイコンは、もちろん、ソースがビュー
 <br>　
 #### 取扱説明
