@@ -1,9 +1,12 @@
 ## 　　Lesson15.　Arg and Varsオブジェクトの変数を動的にセットする 
 #### 開発メモ
+ワークフロー
+<br><img width="600" src="https://user-images.githubusercontent.com/40127279/127756168-8158e17f-0cc9-4864-a9b5-d46e695866aa.png">
+
 ### 1.テキストファイルのタイトルに日時を使う
 　全てスクリプトでも良さそうですが、Alfredワークフローの機能で実装してみました
 <br>　ArgandVarsオブジェクトで変数としてファイル名を定義すればOKです
-<br>
+<br>　<img width="600" src="https://user-images.githubusercontent.com/40127279/127756206-58d369fa-f694-4606-860b-8fa0b9348ca6.png">
 <br>　Name欄:filename
 <br>　Value欄:source-{date:YYYYMMdd}-{time:hhmmss}.txt
 <br>
@@ -15,6 +18,8 @@
 <br>　（スクリプト内では$filenameとして利用）
 <br>
 ### 2.Safariで閲覧しているURLからソースを取得する
+<img width="600" src="https://user-images.githubusercontent.com/40127279/127756256-649008c6-0ab1-45f8-b7d4-05a8fd044334.png">
+
 　URLはアップルスクリプトで取得します
 <br>　今回は、cURLで処理できるように、feed://を削除しています
 ```
