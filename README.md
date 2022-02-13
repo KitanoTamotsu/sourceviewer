@@ -1,4 +1,3 @@
-## 　　Lesson15.　Arg and Varsオブジェクトの変数を動的にセットする 
 #### 開発メモ
 ワークフロー
 <br><img width="600" src="https://user-images.githubusercontent.com/40127279/127756168-8158e17f-0cc9-4864-a9b5-d46e695866aa.png">
